@@ -4,9 +4,9 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: '../build/bundle.js'
+    filename: 'bundle.js'
   },
-  module: {
+    module: {
     rules: [
       {
         test: /\.js$/,
@@ -20,5 +20,11 @@ module.exports = {
         ],
       },
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map',
+  // change line
+  devServer: {
+    contentBase: path.join(__dirname, 'public')
+  },
+
 };
