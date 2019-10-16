@@ -13,7 +13,7 @@ con.connect();
 //   if (err) throw err;
 console.log("Connected!");
 
-con.query("DROP DATABASE library", function (err, result) {
+con.query("DROP DATABASE IF EXISTS library", function (err, result) {
   if (err) throw err;
   console.log("Database dropped.");
 });
