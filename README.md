@@ -10,6 +10,11 @@ npm install
 ```
 in both the root directory and the client directory.
 
+Run
+```
+node db_testseed
+```
+
 Run the following command in the root directory of the project to build the project and start the server running on port 8080: 
 
 ```
