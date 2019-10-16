@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unauthenticated View</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <style>
+        #header {
+            height: 160px;
+            background-size: 320px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #56a0d3;
+            background-image: url(/images/50th-wide-30.png);
+            min-height: 20px;
+            padding: 19px;
+            color: white;
+            font-family: "Bree Serif", "Droid Serif", Arial, serif;
+            z-index: 1;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title-text {
+            font-size: 50px;
+            position: relative;
+            /* left: 32px;
+            top: 9px; */
+            display: flex;
+            text-align: center;
+        }
+
+        #infopanel {
+            /* float: right !important; */
+            width: 270px;
+            height: 100px;
+            color: #000;
+            min-height: 20px;
+            padding: 19px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+        }
+
+        body {
+            background-color: lightgrey;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+        }
+
+        .panel {
+            overflow: auto;
+            background-image: none;
+            background-color: rgb(235, 234, 232);
+            padding: 19px;
+        }
+
+        .form-group {
+            display: inline-block;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        @media (max-width: 739px) {
+            .title-text {
+                font-size: 42px;
+                position: relative;
+                top: 20px;
+                left: 0px;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .title-text {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .logo {
+                display: none;
+            }
+        }
+
+        @media (max-width: 719px) {
+            .title-text {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 619px) {
+            .title-text {
+                font-size: 24px;
+                top: 34px;
+            }
+        }
+    </style>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div class="container" style="display: flex;">
+            <div class="logo">
+                <img src="CAS-tagline-CYMK.png" style="height: 62px;">
+            </div> <span class="title-text">
+                Summer Undergraduate Research Application
+            </span>
+            <div id="infopanel">
+                <p style="margin: -10px 0 6px;">You are logged in as:<br><b>reesb</b></p>
+                <center><a class="btn btn-primary" href="https://www.google.com" target="_blank">Logout</a></center>
+            </div>
+        </div>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- START PAGE -->
+    <div class="container">
+        <div class="col-sm-4 ">
+            <h4>Contact Information:</h4>
+            <div class="panel">
+                <div class="form-group">
+                    <label for="inputFname" class="col-lg-5 control-label">First Name</label>
+                    <div class="col-lg-7">
+                        <input required="" onvalid="" oninvalid="this.setCustomValidity('Enter your first name')"
+                            oninput="setCustomValidity('')" type="text" class="form-control input-xs" id="inputFname"
+                            name="first" placeholder="e.g Rees" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputLname" class="col-lg-5 control-label">Last Name</label>
+                    <div class="col-lg-7">
+                        <input required="" oninvalid="this.setCustomValidity('Enter your last name')"
+                            oninput="setCustomValidity('')" type="text" class="form-control input-xs" id="inputLname"
+                            name="last" placeholder="e.g Braam" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-5 control-label">Email</label>
+                    <div class="col-lg-7">
+                        <input required="" type="email" class="form-control input-xs" id="inputEmail" name="email"
+                            value="" placeholder="example@example.com">
+                        <!--	<div class='hint'>must be of form 'example@example.com'</div> -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPid" class="col-lg-5 control-label">PID</label>
+                    <div class="col-lg-7">
+                        <input maxlength="9" pattern="\d{9}$" oninvalid="this.setCustomValidity('PID must be 9 digits')"
+                            oninput="setCustomValidity('')" placeholder="enter your 9 digit pid" required="" type="text"
+                            class="form-control input-xs" id="inputPid" name="pid" value="">
+                        <!--	<div class='hint'>must be 9 digits long</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4>Supporting Documents:</h4>
+            <div class="panel">
+                <div class="form-group flex-row">
+                    <label for="prop" class="col-lg-4 control-label">Proposal</label>
+                    <div class="col-lg-6" style="float: right;">
+                        <label id="prop-lbl" class="btn btn-primary" data-content="Please upload your Proposal.">Choose
+                            File
+                            <input required="" oninvalid="$('#prop-lbl').popover('show');"
+                                oninput="$('#prop-lbl').popover('hide');" accept="application/pdf" type="file"
+                                class="form-control-file" name="prop" id="prop" style="display:none;"
+                                onchange="$('.upload-file-info').eq(1).html(this.files[0].name)">
+                        </label>
+                        <span class="label label-info upload-file-info"></span>
+                    </div>
+                </div>
+                <div class="form-group flex-row">
+                    <label for="transcript" class="col-lg-4 control-label">Official Transcript</label>
+                    <div class="col-lg-6" style="float: right;">
+                        <label id="transcript-lbl" class="btn btn-primary"
+                            data-content="Please upload your Transcript.">Choose File
+                            <input required="" oninvalid="$('#transcript-lbl').popover('show');"
+                                oninput="$('#transcript-lbl').popover('hide')" accept="application/pdf" type="file"
+                                class="form-control-file" name="transcript" id="transcript" style="display:none;"
+                                onchange="$('.upload-file-info').eq(2).html(this.files[0].name)">
+                        </label>
+                        <span class="label label-info upload-file-info"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h4>Faculty Advisor:</h4>
+            <div class="panel">
+                <div class="form-group">
+                    <label for="inputName" class="col-lg-5 control-label">Name</label>
+                    <div class="col-lg-7">
+                        <input required="" onvalid="" oninvalid="this.setCustomValidity('Enter your advisor\'s name')"
+                            oninput="setCustomValidity('')" type="text" class="form-control input-xs"
+                            id="inputAdvisorName" name="advisorName" placeholder="e.g Boots Quimby" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="advisorEmail" class="col-lg-5 control-label">Email</label>
+                    <div class="col-lg-7">
+                        <input required="" onvalid="" oninvalid="this.setCustomValidity('Enter your advisor\'s email')"
+                            oninput="setCustomValidity('')" type="text" class="form-control input-xs"
+                            id="inputAdvisorEmail" name="advisorEmail" placeholder="example@example.com" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputDept" class="col-lg-5 control-label">Academic Department</label>
+                    <div class="col-lg-7">
+                        <input required="" onvalid=""
+                            oninvalid="this.setCustomValidity('Enter the academic department of your advisor')"
+                            oninput="setCustomValidity('')" type="text" class="form-control input-xs" id="inputDept"
+                            name="dept" placeholder="e.g Computer Science" value="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4" style="float: right;">
+            <h4>Submit Application:</h4>
+            <div class="panel panel-default background-light padded">
+                <input class="btn btn-primary btn-block" type="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+    <!-- END PAGE -->
+</body>
+
+</html>
