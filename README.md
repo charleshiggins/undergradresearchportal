@@ -2,6 +2,13 @@
 
 
 ## Configuration: 
+For the database, all that's needed for the current build to function is a mysql database named 'testdb' with a single table called 'application'. This table has two columns: a primary key integer column and a string.
+
+Run
+```
+npm install
+```
+in both the root directory and the client directory.
 
 Run the following command in the root directory of the project to build the project and start the server running on port 8080: 
 
