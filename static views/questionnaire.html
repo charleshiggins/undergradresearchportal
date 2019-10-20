@@ -53,7 +53,7 @@
 
         body {
             background-color: lightgrey;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Bree Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 14px;
             line-height: 1.42857143;
             color: #333;
@@ -63,19 +63,6 @@
         h5 {
             font-weight: bold;
         }
-
-        /* .panel {
-            overflow: auto;
-            background-image: none;
-            background-color: rgb(235, 234, 232);
-            padding: 19px;
-        }
-
-        .form-group {
-            display: inline-block;
-            margin-left: 15px;
-            margin-right: 15px;
-        } */
     </style>
 
     <!-- HEADER -->
@@ -103,116 +90,83 @@
     <!-- START PAGE -->
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
+                    <!-- <div class="card-header">
                         <h5 class="mb-0">Contact Information</h5>
-                    </div>
+                    </div> -->
                     <div class="card-body">
                         <form class="form" role="form" autocomplete="on">
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">First name</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g John">
+                            <div class="form-group">
+                                <label for="projTitle">Project Title</label>
+                                <input type="text" class="form-control" id="projTitle" placeholder="">
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label>Does your project include international travel?</label>
+                                <div class="row">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yesResp" name="yesResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="yesResp">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="noResp" name="noResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="noResp">No</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">Middle initial</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g T.">
+                            <div class="form-group">
+                                <label>Does your project include community-based research?</label>
+                                <div class="row">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yesResp" name="yesResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="yesResp">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="noResp" name="noResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="noResp">No</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">Last name</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g Smith">
+                            <div class="form-group">
+                                <label>Does your research involve work in LGBTQ studies?</label>
+                                <div class="row">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yesResp" name="yesResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="yesResp">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="noResp" name="noResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="noResp">No</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">PID</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="123456789">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">Email</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="example@unc.edu">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <h5 class="card-header">Supporting Documents</h5>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label class="col-lg-4 col-form-label form-control-label">Proposal</label>
-                                <label class="btn btn-primary btn-sm col-lg-4 mx-auto">Choose File
-                                    <input required type="file" style="display: none" id="proposal">
-                                </label>
-                            </div>
-                            <div class="form-group row">
-                                <label style="white-space: nowrap;"
-                                    class="col-lg-4 col-form-label form-control-label">Official Transcript</label>
-                                <label class="btn btn-primary btn-sm col-lg-4 mx-auto">Choose File
-                                    <input required type="file" style="display: none" id="proposal">
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <h5 class="card-header">Faculty Advisor</h5>
-                    <div class="card-body">
-                        <form class="form" role="form" autocomplete="on">
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">Full Name</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g John Smith">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-5 col-form-label form-control-label">Email</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="example@unc.edu">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-5 form-control-label">Academic Department</label>
-                                <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g Biology">
+                            <div class="form-group">
+                                <label>Are you in the Burch Program?</label>
+                                <div class="row">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="yesResp" name="yesResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="yesResp">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="noResp" name="noResp" class="custom-control-input">
+                                        <label class="custom-control-label" for="noResp">No</label>
+                                    </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <br><br>
-                <!-- <div class="card">
-                    <h5 class="card-header">Featured</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div> -->
-
-
             </div>
         </div>
         <div>
-            <div class="col-sm-2 float-left pl-0 py-5">
+            <!-- <div class="col-sm-2 float-left pl-0 py-5">
                 <a style="width: 75%;   " class="btn btn-primary btn-sm align-self-center float-left" href="#"
                     role="button" target="_blank">Back</a>
-            </div>
+            </div> -->
             <div class="col-sm-2 float-right pr-0 py-5">
                 <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-right" href="#"
-                    role="button" target="_blank">Submit</a>
+                    role="button" target="_blank">Continue</a>
             </div>
         </div>
     </div>
