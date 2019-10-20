@@ -64,18 +64,9 @@
             font-weight: bold;
         }
 
-        /* .panel {
-            overflow: auto;
-            background-image: none;
-            background-color: rgb(235, 234, 232);
-            padding: 19px;
+        .file-name {
+            /* display: inline; */
         }
-
-        .form-group {
-            display: inline-block;
-            margin-left: 15px;
-            margin-right: 15px;
-        } */
     </style>
 
     <!-- HEADER -->
@@ -152,18 +143,29 @@
                             <div class="form-group row">
                                 <label class="col-lg-4 col-form-label form-control-label">Proposal</label>
                                 <label class="btn btn-primary btn-sm col-lg-4 mx-auto">Choose File
-                                    <input required type="file" style="display: none" id="proposal">
+                                    <input required type="file" class="form-control-file" style="display: none"
+                                        id="proposal">
                                 </label>
                             </div>
                             <div class="form-group row">
                                 <label style="white-space: nowrap;"
                                     class="col-lg-4 col-form-label form-control-label">Official Transcript</label>
                                 <label class="btn btn-primary btn-sm col-lg-4 mx-auto">Choose File
-                                    <input required type="file" style="display: none" id="proposal">
+                                    <input required type="file" class="form-control-file" style="display: none"
+                                        id="proposal">
                                 </label>
                             </div>
+                            <script>
+                                $(".form-control-file").on("change", function () {
+                                    var fileName = $(this).val().split("\\").pop();
+                                    $("#file-names").append("<p class=\"file-name mb-0\">" + fileName + "</p>");
+                                });
+                            </script>
                         </form>
                     </div>
+                </div>
+                <div id="file-names">
+                    <!-- <p class="file-name"></p> -->
                 </div>
             </div>
             <div class="col-sm-4">
