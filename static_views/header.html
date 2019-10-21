@@ -44,6 +44,45 @@
         .btn {
             width: 50%;
         }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+        }
+
+        body {
+            background-color: lightgrey;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+        }
+
+        label,
+        h5 {
+            font-weight: bold;
+        }
+
+        input[type=radio] {
+            transform: scale(1.25);
+        }
+
+        .question-row {
+            padding-left: 2%;
+        }
+
+        table {
+            height: 100%;
+            overflow: scroll;
+        }
+
+        a.nav-link {
+            color: white;
+        }
+
+        #cur-page {
+            background-color: #CDCDCD;
+        }
     </style>
 
     <!-- HEADER -->
@@ -65,7 +104,29 @@
                 </div>
             </div>
         </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">View Application</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
+    <script>
+        $(".nav-link").hover(function () {
+            $(this).parent().css("background-color", "#CDCDCD");
+        }, function () {
+            $(this).parent().css("background-color", "#56a0d3");
+        })
+    </script>
     <!-- END HEADER -->
 
 </body>
