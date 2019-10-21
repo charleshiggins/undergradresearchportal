@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+        #header {
+            background-color: #56a0d3;
+            padding: 10px;
+            font-family: "Bree Serif", "Droid Serif", Arial, serif;
+            margin-bottom: 40px;
+        }
+
+        #header-logo {
+            height: 50px;
+        }
+
+        #header-title {
+            font-size: 40px;
+            color: white;
+        }
+
+        #header-login {
+            width: 75%;
+            padding: .8rem;
+        }
+
+        #header-login-text {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            width: 50%;
+            box-shadow: 2px 2px 2px #c0c0c0;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #337ab7;
+        }
+
+        body {
+            background-color: lightgrey;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+        }
+
+        label,
+        h5 {
+            font-weight: bold;
+        }
+
+        input[type=radio] {
+            transform: scale(1.25);
+        }
+
+        .question-row {
+            padding-left: 2%;
+        }
+
+        table {
+            height: 100%;
+            overflow: scroll;
+        }
+    </style>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-3">
+                    <img id="header-logo" src="header-img.png">
+                </div>
+                <div id="header-title" class="col-sm-6 text-center">
+                    Summer Undergraduate Research Application
+                </div>
+                <div class="col-sm-3">
+                    <div id="header-login" class="card card-body bg-light text-center">
+                        <p id="header-login-text">You are logged in as:<br><b>reviewer x</b></p>
+                        <a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
+                            target="_blank">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- START PAGE -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <!-- <div class="card-header">
+                        <h5 class="mb-0">Contact Information</h5>
+                    </div> -->
+                    <div class="card-body">
+                        <form class="form" role="form" autocomplete="on">
+                            <div class="form-group">
+                                <div class="form-inline">
+                                    <label class="col-sm-1">Search</label>
+                                    <input class="col-sm-11 form-control" type="text" placeholder="Search..."
+                                        aria-label="Search">
+                                </div>
+                            </div>
+                            <br>
+                        </form>
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Time Submitted</th>
+                                    <th scope="col">Application</th>
+                                    <th scope="col">Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Rees Braam</td>
+                                    <td><div class="col-sm-10">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticTime" value="Submitted: 09/20/19 at 11:07AM">
+                                      </div> </td>
+                                    <td><a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
+                                            target="_blank">App</a></td>
+                                           <td><div class="form-group col-md-6">
+                                                
+                                                <input type="score" class="form-control" id="inputScore" placeholder="Enter Score">
+
+                                              </div></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Charles Higgins</td>
+                                    <td><div class="col-sm-10">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticTime" value="Submitted: 09/20/19 at 9:42PM">
+                                      </div> </td>
+                                    <td><a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
+                                            target="_blank">App</a></td>
+                                           <td> <div class="form-group col-md-6">
+                                               
+                                            <input type="score" class="form-control" id="inputScore"  placeholder="Enter Score">
+                                              </div> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Patrick Annunziata</td>
+                                    <td><div class="col-sm-10">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticTime" value="Submitted: 09/21/19 at 2:13PM">
+                                      </div> </td>
+                                    <td><a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
+                                            target="_blank">App</a></td>
+                                    <td><div class="form-group col-md-6">
+                                        
+                                        <input type="score" class="form-control" id="inputScore" placeholder="Enter Score">
+                                      </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+
+   
+</body>
+
+</html>
