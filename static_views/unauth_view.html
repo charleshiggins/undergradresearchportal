@@ -91,117 +91,70 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center p-2">Please login to use the application portal.
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Select a View</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td><button onclick="toStudent()">Student</button>
+
+                                            <script>
+                                                function toStudent() {
+                                                    location.replace("student_view_1.html")
+                                                }
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td><button onclick="toFaculty()">Faculty</button>
+
+                                            <script>
+                                                function toFaculty() {
+                                                    location.replace("faculty_view.html")
+                                                }
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td><button onclick="toAdmin()">Admin</button>
+
+                                            <script>
+                                                function toAdmin() {
+                                                    location.replace("admin_view_1.html")
+                                                }
+                                            </script>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td><button onclick="toReviewer()">Reviewer</button>
+
+                                            <script>
+                                                function toReviewer() {
+                                                    location.replace("reviewer_view.html")
+                                                }
+                                            </script>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!--  <div class="col-sm-4 ">
-            <h4>Contact Information:</h4>
-            <div class="panel">
-                <div class="form-group">
-                    <label for="inputFname" class="col-lg-5 control-label">First Name</label>
-                    <div class="col-lg-7">
-                        <input required="" onvalid="" oninvalid="this.setCustomValidity('Enter your first name')"
-                            oninput="setCustomValidity('')" type="text" class="form-control input-xs" id="inputFname"
-                            name="first" placeholder="e.g Rees" value="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputLname" class="col-lg-5 control-label">Last Name</label>
-                    <div class="col-lg-7">
-                        <input required="" oninvalid="this.setCustomValidity('Enter your last name')"
-                            oninput="setCustomValidity('')" type="text" class="form-control input-xs" id="inputLname"
-                            name="last" placeholder="e.g Braam" value="">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="inputEmail" class="col-lg-5 control-label">Email</label>
-                    <div class="col-lg-7">
-                        <input required="" type="email" class="form-control input-xs" id="inputEmail" name="email"
-                            value="" placeholder="example@example.com">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="inputPid" class="col-lg-5 control-label">PID</label>
-                    <div class="col-lg-7">
-                        <input maxlength="9" pattern="\d{9}$" oninvalid="this.setCustomValidity('PID must be 9 digits')"
-                            oninput="setCustomValidity('')" placeholder="enter your 9 digit pid" required="" type="text"
-                            class="form-control input-xs" id="inputPid" name="pid" value="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <h4>Supporting Documents:</h4>
-            <div class="panel">
-                <div class="form-group flex-row">
-                    <label for="prop" class="col-lg-4 control-label">Proposal</label>
-                    <div class="col-lg-6" style="float: right;">
-                        <label id="prop-lbl" class="btn btn-primary" data-content="Please upload your Proposal.">Choose
-                            File
-                            <input required="" oninvalid="$('#prop-lbl').popover('show');"
-                                oninput="$('#prop-lbl').popover('hide');" accept="application/pdf" type="file"
-                                class="form-control-file" name="prop" id="prop" style="display:none;"
-                                onchange="$('.upload-file-info').eq(1).html(this.files[0].name)">
-                        </label>
-                        <span class="label label-info upload-file-info"></span>
-                    </div>
-                </div>
-                <div class="form-group flex-row">
-                    <label for="transcript" class="col-lg-4 control-label">Official Transcript</label>
-                    <div class="col-lg-6" style="float: right;">
-                        <label id="transcript-lbl" class="btn btn-primary"
-                            data-content="Please upload your Transcript.">Choose File
-                            <input required="" oninvalid="$('#transcript-lbl').popover('show');"
-                                oninput="$('#transcript-lbl').popover('hide')" accept="application/pdf" type="file"
-                                class="form-control-file" name="transcript" id="transcript" style="display:none;"
-                                onchange="$('.upload-file-info').eq(2).html(this.files[0].name)">
-                        </label>
-                        <span class="label label-info upload-file-info"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <h4>Faculty Advisor:</h4>
-            <div class="panel">
-                <div class="form-group">
-                    <label for="inputName" class="col-lg-5 control-label">Name</label>
-                    <div class="col-lg-7">
-                        <input required="" onvalid="" oninvalid="this.setCustomValidity('Enter your advisor\'s name')"
-                            oninput="setCustomValidity('')" type="text" class="form-control input-xs"
-                            id="inputAdvisorName" name="advisorName" placeholder="e.g Boots Quimby" value="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="advisorEmail" class="col-lg-5 control-label">Email</label>
-                    <div class="col-lg-7">
-                        <input required="" onvalid="" oninvalid="this.setCustomValidity('Enter your advisor\'s email')"
-                            oninput="setCustomValidity('')" type="text" class="form-control input-xs"
-                            id="inputAdvisorEmail" name="advisorEmail" placeholder="example@example.com" value="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputDept" class="col-lg-5 control-label">Academic Department</label>
-                    <div class="col-lg-7">
-                        <input required="" onvalid=""
-                            oninvalid="this.setCustomValidity('Enter the academic department of your advisor')"
-                            oninput="setCustomValidity('')" type="text" class="form-control input-xs" id="inputDept"
-                            name="dept" placeholder="e.g Computer Science" value="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4" style="float: right;">
-            <h4>Submit Application:</h4>
-            <div class="panel panel-default background-light padded">
-                <input class="btn btn-primary btn-block" type="submit" value="Submit">
-            </div>
-        </div>
-    </div> -->
-    <!-- END PAGE -->
 </body>
 
 </html>
