@@ -107,32 +107,31 @@
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">First name</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text" placeholder="e.g John">
+                                    <input required class="form-control" type="text" placeholder="e.g John">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Middle initial</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text" placeholder="e.g T.">
+                                    <input required class="form-control" type="text" placeholder="e.g T.">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Last name</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text" placeholder="e.g Smith">
+                                    <input required class="form-control" type="text" placeholder="e.g Smith">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">PID</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text" placeholder="123456789">
+                                    <input required class="form-control" type="text" placeholder="123456789">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Email</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text"
-                                        placeholder="example@unc.edu">
+                                    <input required class="form-control" type="text" placeholder="example@unc.edu">
                                 </div>
                             </div>
                         </form>
@@ -146,14 +145,18 @@
                         <form>
                             <div class="form-group row">
                                 <label class="col-lg-4 col-form-label form-control-label">Proposal</label>
-                                <a class="btn btn-primary btn-sm align-self-center col-lg-4 mx-auto" href="#"
-                                    role="button" target="_blank">View</a>
+                                <label class="btn btn-primary btn-sm col-lg-4 mx-auto">Choose File
+                                    <input required type="file" class="form-control-file" style="display: none"
+                                        id="proposal">
+                                </label>
                             </div>
                             <div class="form-group row">
                                 <label style="white-space: nowrap;"
                                     class="col-lg-4 col-form-label form-control-label">Official Transcript</label>
-                                <a class="btn btn-primary btn-sm align-self-center col-lg-4 mx-auto" href="#"
-                                    role="button" target="_blank">View</a>
+                                <label class="btn btn-primary btn-sm col-lg-4 mx-auto">Choose File
+                                    <input required type="file" class="form-control-file" style="display: none"
+                                        id="proposal">
+                                </label>
                             </div>
                         </form>
                     </div>
@@ -170,21 +173,19 @@
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Full Name</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text"
-                                        placeholder="e.g John Smith">
+                                    <input required class="form-control" type="text" placeholder="e.g John Smith">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Email</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text"
-                                        placeholder="example@unc.edu">
+                                    <input required class="form-control" type="text" placeholder="example@unc.edu">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 form-control-label">Academic Department</label>
                                 <div class="col-lg-7">
-                                    <input required disabled class="form-control" type="text" placeholder="e.g Biology">
+                                    <input required class="form-control" type="text" placeholder="e.g Biology">
                                 </div>
                             </div>
                         </form>
@@ -199,7 +200,7 @@
             </div>
             <div class="col-sm-2 float-right pr-0 py-5">
                 <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-right" href="#"
-                    role="button" target="_blank">Edit</a>
+                    role="button" target="_blank">Done</a>
             </div>
         </div>
     </div>
