@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { Header } from './Header.js';
-import submitRow from '../api.js'
+import {submitApplication} from '../api.js'
 export class Unauth extends React.Component {
     
     submit(){
-        submitRow();
+        submitApplication("test");
     }
     
     render() {
