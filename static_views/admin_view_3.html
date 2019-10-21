@@ -9,66 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
-
-        #header {
-            background-color: #56a0d3;
-            padding: 10px;
-            font-family: "Bree Serif", "Droid Serif", Arial, serif;
-            margin-bottom: 40px;
-        }
-
-        #header-logo {
-            height: 50px;
-        }
-
-        #header-title {
-            font-size: 40px;
-            color: white;
-        }
-
-        #header-login {
-            width: 75%;
-            padding: .8rem;
-        }
-
-        #header-login-text {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .btn {
-            width: 50%;
-            box-shadow: 2px 2px 2px #c0c0c0;
-        }
-
-        .btn-primary {
-            color: #fff;
-            background-color: #337ab7;
-        }
-
-        body {
-            background-color: lightgrey;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #333;
-        }
-
-        label,
-        h5 {
-            font-weight: bold;
-        }
-
-        .file-name {
-            /* display: inline; */
-        }
-    </style>
-
     <!-- HEADER -->
     <div id="header">
         <div class="container">
@@ -213,16 +157,22 @@
             </div>
         </div>
         <div>
-            <div class="col-sm-2 float-left pl-0 py-5">
+            <!-- <div class="col-sm-2 float-left pl-0 py-5">
                 <a style="width: 75%;   " class="btn btn-primary btn-sm align-self-center float-left" href="#"
                     role="button" target="_blank">Back</a>
-            </div>
+            </div> -->
             <div class="col-sm-2 float-right pr-0 py-5">
-                <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-right" href="#"
-                    role="button" target="_blank">Done</a>
+                <a style="width: 75%; color: white;"
+                    class="btn btn-primary btn-sm align-self-center float-right save-btn" role="button"
+                    target="_blank">Save</a>
             </div>
         </div>
     </div>
+    <script>
+        $(".save-btn").click(function () {
+            $("body").html("test");
+        })
+    </script>
 </body>
 
 </html>
