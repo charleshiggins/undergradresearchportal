@@ -86,7 +86,7 @@
                 <div class="col-sm-3">
                     <div id="header-login" class="card card-body bg-light text-center">
                         <p id="header-login-text">You are logged in as:<br><b>reesb</b></p>
-                        <a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
+                        <a class="btn btn-primary btn-sm align-self-center" id = "logout" href="#" role="button"
                             target="_blank">Logout</a>
                     </div>
                 </div>
@@ -118,8 +118,12 @@
             $(this).parent().css("background-color", "#56a0d3");
         })
 
-        $("#home").click(function () {
+        $("#logout").click(function () {
             location.replace("unauth_view.html")
+        });
+
+        $("#home").click(function () {
+            location.replace("student_view_1.html")
         });
     </script>
     <!-- END HEADER -->
