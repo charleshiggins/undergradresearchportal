@@ -1,5 +1,4 @@
 async function submitApp() {
-    console.log("we're here");
     let applicationObject = {
         Application: {
             "fname": document.getElementById('fname').value,
@@ -15,7 +14,6 @@ async function submitApp() {
         }
     
     }
-    console.log(applicationObject)
     submitApplication(applicationObject).then(() => {
         location.replace("student_view_3.html")
       });
