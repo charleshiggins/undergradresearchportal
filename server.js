@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 var mysql = require('mysql');
 var fs = require('fs')
+var cors = require('cors') //delete this when not testing with local file directory
+app.use(cors())
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -22,7 +24,7 @@ app.get('/submit', function (req, res) {
   });
 });
 
-app.post('/submitApplication', function (req, res) {
+app.post('/submitApplication', function (req, res, next) {
   console.log(req.body);
   con.query("INSERT INTO testdb.application values (?, ?, ?, ?, ?, ?, ?, ?, ?)", [Math.floor(Math.random() * Math.floor(4000)), req.body.Application.fname,  req.body.Application.mname,  req.body.Application.lname,  req.body.Application.pid,  req.body.Application.email,  req.body.Application.Faculty.fullname,  req.body.Application.Faculty.email,  req.body.Application.Faculty.academicDepartment], function (err, result) {
     if (err) {

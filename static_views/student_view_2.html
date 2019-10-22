@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="submitApp.js"></script>
+
     <link rel="stylesheet" href="css.css">
 </head>
 
@@ -80,31 +82,31 @@
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">First name</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g John">
+                                    <input required class="form-control" type="text" placeholder="e.g John" id="fname">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Middle initial</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g T.">
+                                    <input required class="form-control" type="text" placeholder="e.g T."  id="mname">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Last name</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g Smith">
+                                    <input required class="form-control" type="text" placeholder="e.g Smith"  id="lname">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">PID</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="123456789">
+                                    <input required class="form-control" type="text" placeholder="123456789"  id="pid">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Email</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="example@unc.edu">
+                                    <input required class="form-control" type="text" placeholder="example@unc.edu"  id="email">
                                 </div>
                             </div>
                         </form>
@@ -152,19 +154,19 @@
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Full Name</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g John Smith">
+                                    <input required class="form-control" type="text" placeholder="e.g John Smith" id="facultyName">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 col-form-label form-control-label">Email</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="example@unc.edu">
+                                    <input required class="form-control" type="text" placeholder="example@unc.edu" id="facultyEmail">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-5 form-control-label">Academic Department</label>
                                 <div class="col-lg-7">
-                                    <input required class="form-control" type="text" placeholder="e.g Biology">
+                                    <input required class="form-control" type="text" placeholder="e.g Biology" id="facultyDepartment">
                                 </div>
                             </div>
                         </form>
@@ -178,7 +180,7 @@
                     onclick="prevPage()" role="button" target="_blank">Back</a>
             </div>
             <div class="col-sm-2 float-right pr-0 py-5">
-                <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-right" onclick="submit()"
+                <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-right" onclick="submitApp()"
                     role="button" target="_blank">Submit</a>
             </div>
         </div>

@@ -6,28 +6,14 @@ export async function submitRow(){
 
 }
 
-export async function submitApplication(applicationJSON){
-    const dummyobj = {
-        Application: {
-            "fname": "Charles",
-            "mname": "M",
-            "lname": "Higgins",
-            "pid": "123456789",
-            "email": "charles7@live.unc.edu",
-            "Faculty": {
-                "fullname": "John Doe",
-                "email": "example@unc.edu",
-                "academicDepartment": "Computer Science"
-            }
-        }
-    }
+export async function submitApplication(applicationObject){
     const response = await fetch('http://localhost:8080/submitApplication', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
         method: 'post',
-        body: JSON.stringify(dummyobj)});
+        body: JSON.stringify(applicationObject)});
         console.log(response);
 
 }
