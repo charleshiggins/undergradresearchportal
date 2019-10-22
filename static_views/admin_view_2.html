@@ -157,7 +157,7 @@
         </div>
         <div>
             <div class="col-sm-2 float-left pl-0 py-5">
-                <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-left" href="#"
+                <a style="width: 75%;" class="btn btn-primary btn-sm align-self-center float-left" id = "back" href="#"
                     role="button" target="_blank">Back</a>
             </div>
             <div class="col-sm-2 float-right pr-0 py-5">
@@ -169,13 +169,17 @@
     </div>
     <script>
         $(".edit-btn").click(function () {
-            $("body").html('');
+            location.replace("admin_view_3.html")
         })
         $("#logout").click(function () {
             location.replace("unauth_view.html")
         });
 
         $("#home").click(function () {
+            location.replace("admin_view_1.html")
+        });
+
+        $("#back").click(function () {
             location.replace("admin_view_1.html")
         });
     </script>

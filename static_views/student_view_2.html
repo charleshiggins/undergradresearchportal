@@ -174,7 +174,7 @@
         </div>
         <div>
             <div class="col-sm-2 float-left pl-0 py-5">
-                <a style="width: 75%;   " class="btn btn-primary btn-sm align-self-center float-left"
+                <a style="width: 75%;" id = "back" class="btn btn-primary btn-sm align-self-center float-left"
                     onclick="prevPage()" role="button" target="_blank">Back</a>
             </div>
             <div class="col-sm-2 float-right pr-0 py-5">
@@ -184,11 +184,11 @@
         </div>
     </div>
     <script>
-        function prevPage() {
+        $("#back").click(function () {
             location.replace("student_view_1.html")
-        }
+        });
         function submit() {
-            import { submitApplication } from '../client/api.js'
+           // import { submitApplication } from '../client/api.js'
             location.replace("student_view_3.html")
         }
     </script>

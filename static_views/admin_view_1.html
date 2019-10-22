@@ -87,7 +87,7 @@
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Rees Braam</td>
-                                    <td><a class="btn btn-primary btn-sm align-self-center app" href="#" role="button"
+                                    <td><a class="btn btn-primary btn-sm align-self-center app" id = "app" href="#" role="button"
                                             target="_blank">App</a></td>
                                     <td><a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
                                             target="_blank">Download</a></td>
@@ -97,7 +97,7 @@
                                 <tr>
                                     <th scope="row">2</th>
                                     <td>Charles Higgins</td>
-                                    <td><a class="btn btn-primary btn-sm align-self-center app" href="#" role="button"
+                                    <td><a class="btn btn-primary btn-sm align-self-center app" id = "app" href="#" role="button"
                                             target="_blank">App</a></td>
                                     <td><a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
                                             target="_blank">Download</a></td>
@@ -107,7 +107,7 @@
                                 <tr>
                                     <th scope="row">3</th>
                                     <td>Patrick Annunziata</td>
-                                    <td><a class="btn btn-primary btn-sm align-self-center app" href="#" role="button"
+                                    <td><a class="btn btn-primary btn-sm align-self-center app" id = "app" href="#" role="button"
                                             target="_blank">App</a></td>
                                     <td><a class="btn btn-primary btn-sm align-self-center" href="#" role="button"
                                             target="_blank">Download</a></td>
@@ -132,6 +132,10 @@
 
         $("#home").click(function () {
             location.replace("admin_view_1.html")
+        });
+
+        $("#app").click(function () {
+            location.replace("admin_view_2.html")
         });
     </script>
 </body>
