@@ -11,7 +11,7 @@ export class Unauth extends React.Component {
     render() {
         return (
             <div>
-                <Header view={userType} />
+                <Header />
                 <div>Unauth</div>
                 <button onClick={this.submit}>Insert row into database</button>
             </div>
