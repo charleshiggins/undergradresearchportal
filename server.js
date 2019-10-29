@@ -18,7 +18,7 @@ app.use('/', express.static('./client/public'));
 app.get('/submit', function (req, res) {
   con.query("INSERT INTO testdb.application values (?, ?)", [Math.floor(Math.random() * Math.floor(4000)), 'aaaaaaa'], function (err, result) {
     if (err) {
-      return res.status(500).send('error msg');
+      return res.status(500).send('error');
     }
     return res.status(200).send('nice');
   });
@@ -34,14 +34,21 @@ app.post('/submitApplication', function (req, res, next) {
   });
 })
 
+/*
 app.get('/:onyen', function (req, res) {
   con.query("SELECT role FROM person WHERE onyen = ?", [req.params.onyen], function (err, result) {
     if (err) {
-      return res.status(500).send('error msg');
+      return res.status(500).send('err');
     }
     console.log(res);
     return res;
   });
+});
+*/
+
+app.get('/csv', function (req, res) {
+  //to-do: call generateCSV to make csv file first when this endpoint gets reached
+      res.download('./output.csv', 'user-facing-filename.csv', (err) => {})
 });
 
 app.listen(8080)
