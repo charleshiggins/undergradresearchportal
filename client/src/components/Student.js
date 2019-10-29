@@ -24,7 +24,24 @@ export class Student extends React.Component {
     }
     submit() {
         console.log(this.state);
-        submitApplication("test");
+        let applicationObject = {
+            Application: {
+                fname: this.state.fname,
+                mname: this.state.mname,
+                lname: this.state.lname,
+                pid: this.state.pid,
+                email: this.state.email,
+                proposal: "to-do:path",
+                transcript: "to-do:path",
+                Faculty: {
+                    fullname: this.state.facFullName,
+                    email: this.state.facEmail,
+                    academicDepartment: this.state.facAcademicDepartment
+                }
+            }
+    
+        }
+            submitApplication(applicationObject);
     }
 
     goNextPage() {
