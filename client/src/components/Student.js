@@ -5,7 +5,7 @@ import { submitApplication } from '../api.js'
 export class Student extends React.Component {
     state = {
         view: 1,
-        fname: "",
+        projTitle: "",
         mname: "",
         lname: "",
     }
@@ -24,11 +24,11 @@ export class Student extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12">
-                        <div className="card" style="height: 100%; overflow: scroll;">
+                        <div className="card" style={{height: '100%', overflow: scroll}}>
                             <div className="card-body">
-                            <form className="form" role="form" autocomplete="on">
+                            <form className="form" role="form" autoComplete="on">
                             <div className="form-group row">
-                                <label className="col-sm-2 col-form-label" for="projTitle">Project Title</label>
+                                <label className="col-sm-2 col-form-label" htmlFor="projTitle">Project Title</label>
                                 <div className="col-sm-10">
                                     <input type="text" className="form-control" id="projTitle" placeholder="" />
                                 </div>
@@ -40,11 +40,11 @@ export class Student extends React.Component {
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q1" id="yesResp1"
                                             value="yes" />
-                                        <label className="form-check-label" for="yesResp1">Yes</label>
+                                        <label className="form-check-label" htmlFor="yesResp1">Yes</label>
                                     </div>
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q1" id="noResp1" value="no" />
-                                        <label cclassNamelass="form-check-label" for="noResp1">No</label>
+                                        <label className="form-check-label" htmlFor="noResp1">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -54,11 +54,11 @@ export class Student extends React.Component {
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q2" id="yesResp2"
                                             value="yes" />
-                                        <label className="form-check-label" for="yesResp2">Yes</label>
+                                        <label className="form-check-label" htmlFor="yesResp2">Yes</label>
                                     </div>
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q2" id="noResp2" value="no" />
-                                        <label className="form-check-label" for="noResp2">No</label>
+                                        <label className="form-check-label" htmlFor="noResp2">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -68,11 +68,11 @@ export class Student extends React.Component {
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q3" id="yesResp3"
                                             value="yes" />
-                                        <label className="form-check-label" for="yesResp3">Yes</label>
+                                        <label className="form-check-label" htmlFor="yesResp3">Yes</label>
                                     </div>
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q3" id="noResp3" value="no" />
-                                        <label className="form-check-label" for="noResp3">No</label>
+                                        <label className="form-check-label" htmlFor="noResp3">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -82,11 +82,11 @@ export class Student extends React.Component {
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q4" id="yesResp4"
                                             value="yes" />
-                                        <label className="form-check-label" for="yesResp4">Yes</label>
+                                        <label className="form-check-label" htmlFor="yesResp4">Yes</label>
                                     </div>
                                     <div className="form-check form-check-inline">
                                         <input className="form-check-input" type="radio" name="q4" id="noResp4" value="no" />
-                                        <label className="form-check-label" for="noResp4">No</label>
+                                        <label className="form-check-label" htmlFor="noResp4">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@ export class Student extends React.Component {
                 </div>
                 <div>
                     <div className="col-sm-2 float-right pr-0 py-5">
-                        <a style="width: 75%;" className="btn btn-primary btn-sm align-self-center float-right" onclick="nextPage()"
+                        <a className="btn btn-primary btn-sm align-self-center float-right"
                             role="button" target="_blank">Continue</a>
                     </div>
                 </div>
