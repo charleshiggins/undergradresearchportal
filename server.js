@@ -32,8 +32,16 @@ app.post('/submitApplication', function (req, res, next) {
     }
     return res.status(200).send('nice');
   });
-
-
 })
+
+app.get('/:onyen', function (req, res) {
+  con.query("SELECT role FROM person WHERE onyen = ?", [req.params.onyen], function (err, result) {
+    if (err) {
+      return res.status(500).send('error msg');
+    }
+    console.log(res);
+    return res;
+  });
+});
 
 app.listen(8080)

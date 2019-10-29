@@ -6,10 +6,13 @@ import { getUserType } from '../api.js'
 
 export class App extends React.Component {
     userType(onyen) {
-        getUserType(onyen)
+        return getUserType(onyen)
     };
 
     render() {
+
+        // const onyen = this.props.;
+        const onyen = 'reesb';
         return (
             <div>
                 <Header view={this.userType(onyen)} />

@@ -18,6 +18,7 @@ export async function submitApplication(applicationObject) {
 }
 
 export async function getUserType(onyen) {
-    const response = await fetch('http://localhost:8080/getUserType?onyen=' + onyen)
+    const response = await fetch('http://localhost:8080?onyen=' + onyen);
     console.log(response);
+    return response.json().userType;
 }
