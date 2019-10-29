@@ -8,13 +8,20 @@ export class Student extends React.Component {
         projTitle: "",
         mname: "",
         lname: "",
+        pid: "",
+        email: "",
+        facFullName: "",
+        facEmail: "",
+        facAcademicDepartment: ""
     }
 
     handleTextInputChange(event) {
         const { name, value } = event.target;
         this.setState({ [name]: value });
+        console.log(this.state);
     }
     submit() {
+        console.log(this.state);
         submitApplication("test");
     }
 
@@ -42,32 +49,32 @@ export class Student extends React.Component {
                                         <div className="form-group row">
                                             <label className="col-lg-5 col-form-label form-control-label">First name</label>
                                             <div className="col-lg-7">
-                                                <input required className="form-control" type="text" placeholder="e.g John" />
+                                                <input required className="form-control" type="text" placeholder="e.g John" name='fname' onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-lg-5 col-form-label form-control-label">Middle initial</label>
                                             <div className="col-lg-7">
-                                                <input required className="form-control" type="text" placeholder="e.g T." />
+                                                <input required className="form-control" type="text" placeholder="e.g T." name='mname' onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-lg-5 col-form-label form-control-label">Last name</label>
                                             <div className="col-lg-7">
-                                                <input required className="form-control" type="text" placeholder="e.g Smith" />
+                                                <input required className="form-control" type="text" placeholder="e.g Smith" name='lname' onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-lg-5 col-form-label form-control-label">PID</label>
                                             <div className="col-lg-7">
-                                                <input required className="form-control" type="text" placeholder="123456789" />
+                                                <input required className="form-control" type="text" placeholder="123456789" name='pid' onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-lg-5 col-form-label form-control-label">Email</label>
                                             <div className="col-lg-7">
                                                 <input required className="form-control" type="text"
-                                                    placeholder="example@unc.edu" />
+                                                    placeholder="example@unc.edu" name='email' onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                     </form>
@@ -105,20 +112,20 @@ export class Student extends React.Component {
                                             <label className="col-lg-5 col-form-label form-control-label">Full Name</label>
                                             <div className="col-lg-7">
                                                 <input required className="form-control" type="text"
-                                                    placeholder="e.g John Smith" />
+                                                    placeholder="e.g John Smith" name = "facFullName" onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-lg-5 col-form-label form-control-label">Email</label>
                                             <div className="col-lg-7">
                                                 <input required className="form-control" type="text"
-                                                    placeholder="example@unc.edu" />
+                                                    placeholder="example@unc.edu" name = "facEmail" onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                         <div className="form-group row">
                                             <label className="col-lg-5 form-control-label">Academic Department</label>
                                             <div className="col-lg-7">
-                                                <input required className="form-control" type="text" placeholder="e.g Biology" />
+                                                <input required className="form-control" type="text" placeholder="e.g Biology" name = "facAcademicDepartment" onChange={ (e) => this.handleTextInputChange(e) }/>
                                             </div>
                                         </div>
                                     </form>
