@@ -8,7 +8,8 @@
         }
 
         #header-logo {
-            height: 50px;
+            height: 70px;
+            border-radius: .25rem;
         }
 
         #header-title {
