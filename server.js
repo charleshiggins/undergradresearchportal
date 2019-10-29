@@ -48,7 +48,7 @@ app.get('/:onyen', function (req, res) {
 
 app.get('/csv', function (req, res) {
   //to-do: call generateCSV to make csv file first when this endpoint gets reached
-      res.download('./output.csv', 'user-facing-filename.csv', (err) => {})
+      res.download('./output.csv', 'applicationData.csv', (err) => {})
 });
 
 app.listen(8080)
