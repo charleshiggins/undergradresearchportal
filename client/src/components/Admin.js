@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { Header } from './Header.js';
 import { submitApplication } from '../api.js'
 export class Student extends React.Component {
     state = {
